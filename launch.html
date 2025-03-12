@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Launch Satellite</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Orbitron:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="launch.css">
+</head>
+<body>
+    <div class="main-container">
+        <!-- Header Section -->
+        <header>
+            <div class="header-content">
+                <h1>Launch Your Satellite</h1>
+                <p>Enter the necessary parameters to check for collision risks in LEO (Low Earth Orbit).</p>
+            </div>
+        </header>
+
+        <!-- Form Section -->
+        <div class="form-container">
+            <form id="launch-form">
+                <div class="form-group">
+                    <label for="semi-major-axis">Semi-Major Axis (km)</label>
+                    <input type="number" id="semi-major-axis" name="semi-major-axis" min="6678" max="8378" required>
+                    <small>Range: 6678 – 8378 km (Altitude: 200 – 2000 km)</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="eccentricity">Eccentricity</label>
+                    <input type="number" id="eccentricity" name="eccentricity" min="0" max="0.25" step="0.01" required>
+                    <small>Range: 0 – 0.25 (Mostly near 0 for LEO)</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="inclination">Inclination (°)</label>
+                    <input type="number" id="inclination" name="inclination" min="0" max="120" required>
+                    <small>Range: 0 – 120° (Sun-synchronous: 97°–98°)</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="raan">Right Ascension of Ascending Node (RAAN) (°)</label>
+                    <input type="number" id="raan" name="raan" min="0" max="360" required>
+                    <small>Range: 0 – 360°</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="argument-of-perigee">Argument of Perigee (°)</label>
+                    <input type="number" id="argument-of-perigee" name="argument-of-perigee" min="0" max="360" required>
+                    <small>Range: 0 – 360°</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="mean-anomaly">Mean Anomaly (°)</label>
+                    <input type="number" id="mean-anomaly" name="mean-anomaly" min="0" max="360" required>
+                    <small>Range: 0 – 360°</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="launch-date">Planned Launch Date</label>
+                    <input type="date" id="launch-date" name="launch-date" required>
+                    <small>Default: Today's date</small>
+                </div>
+
+                <!-- Check Collision Button -->
+                <button type="button" class="btn" id="check-collision-btn">Check Collision</button>
+            </form>
+        </div>
+
+        <!-- Collision Risk Display Section -->
+        <div class="collision-risk-container">
+            <h2>Collision Risk Analysis</h2>
+            <div class="risk-circle">
+                <span class="risk-value">0%</span>
+            </div>
+            <div id="collision-status">Collision Status: Unknown</div>
+        </div>
+
+        <!-- Footer Section -->
+        <footer>
+            <p>&copy; 2025 Satellite Collision Project | All Rights Reserved</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
