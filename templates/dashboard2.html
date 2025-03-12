@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Satellite Collision Checking</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/dashboard2.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Satellite Trajectory Viewer</h1>
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <label for="satellite1" class="form-label">Select Satellite 1:</label>
+                <select id="satellite1" class="form-select"></select>
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="satellite2" class="form-label">Select Satellite 2:</label>
+                <select id="satellite2" class="form-select"></select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <h5>Trajectory for Satellite 1:</h5>
+                <div id="satellite1-placeholder" class="border p-3 text-center">No satellite selected.</div>
+            </div>
+            <div class="col-md-6">
+                <h5>Trajectory for Satellite 2:</h5>
+                <div id="satellite2-placeholder" class="border p-3 text-center">No satellite selected.</div>
+            </div>
+        </div>
+        <!-- Space below the button and Risk Circle -->
+        <div class="text-center mt-4">
+            <button id="generateButton" class="btn btn-primary">Perform Analysis</button>
+        </div>
+        <div class="text-center mt-4">
+            <div class="risk-circle">
+                <span class="risk-value">0%</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
