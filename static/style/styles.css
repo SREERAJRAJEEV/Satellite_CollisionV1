@@ -1,0 +1,346 @@
+
+/* General Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #1b1b3a;
+    color: #fff;
+    background: url("../images/background.jpg") no-repeat center center fixed;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    transition: background-color 0.5s ease;
+}
+
+/* Main Container Styles */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers content vertically */
+    align-items: center; /* Centers content horizontally */
+    height: 100vh; /* Full viewport height */
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+/* Header Section */
+header {
+    text-align: center;
+    margin-bottom: 1px;
+    transition: transform 0.3s ease;
+}
+
+header h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3em;
+    color: #fff;
+    margin: 0;
+    letter-spacing: 2px;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+}
+
+header p {
+    font-size: 1.2em;
+    color: #b0b0b0;
+    margin-top: 10px;
+    font-weight: 400;
+}
+
+/* Footer Section */
+/* Footer Section */
+
+
+/* To improve the footer text appearance */
+footer p {
+    margin: 0;
+    font-weight: 500;
+}
+
+/* Add some space between the footer and the bottom of the page */
+.main-container {
+    padding-bottom: 60px; /* Give space for footer so it doesn't overlap content */
+}
+
+
+/* Dashboard Container */
+.dashboard-container {
+    margin-top: 5px;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%; /* Occupy full width */
+    height: calc(100vh - 150px); /* Full height minus the header and padding */
+    transition: transform 0.3s ease;
+    padding: 0;
+    margin: 0;
+    overflow-y: auto;
+    
+}
+
+/* Dashboard Layout */
+.dashboard {
+    display: flex;
+    justify-content: space-between;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    margin: 0;
+    padding: 20px; /* Add spacing inside the dashboard */
+    box-sizing: border-box; /* Ensure padding is included in dimensions */
+}
+
+/* Left and Right Panel Styles */
+.panel {
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    width: 32%; /* Panels now take up equal space */
+    padding: 40px; /* Add more padding for a spacious look */
+    height: 100%; /* Ensure panels stretch to fill the height of the dashboard */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center the content vertically */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    backdrop-filter: blur(15px);
+    position: relative;
+}
+
+.panel:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.8);
+}
+
+.panel:before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(45deg, #3498db, #8e44ad);
+    transform: translateX(-50%);
+}
+
+/* Center Panel Styles */
+.center-panel {
+    /* margin-top: 2px; */
+    width: 32%; /* Same width as left and right panels */
+    padding: 40px;
+    height: 100%; /* Full height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center the content vertically */
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    backdrop-filter: blur(15px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.center-panel:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.8);
+}
+
+/* Image and Graph Styling */
+
+.satellite-image {
+    width: 100%; /* Ensure images fill the width of their panels */
+    height: auto;
+    border-radius: 15px;
+    border: 5px solid #3498db;
+    transition: transform 0.3s ease;
+}
+
+.satellite-image:hover {
+    transform: scale(1.05);
+}
+
+
+
+.graph-placeholder {
+    height:250px; /* Increase the height of trajectory graph placeholders */
+    margin-top: 30px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.loading-spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    /* animation: spin 2s linear infinite; */
+}
+
+.satelliteImage{
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+/* @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+} */
+
+.graph-placeholder p {
+    font-size: 14px;
+    color: #fff;
+    margin-top: 10px;
+}
+
+/* Dropdown Styling */
+.dropdown {
+    margin: 15px 0;
+}
+
+select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+select:hover {
+    background-color: #444;
+}
+
+select:focus {
+    outline: none;
+    background-color: #555;
+}
+
+/* Risk Display */
+.risk-display {
+    margin-top: 20px;
+}
+
+.risk-circle {
+    width: 250px; /* Larger risk circle for better visibility */
+    height: 250px;
+    font-size: 32px; /* Adjust font size for better scaling */
+    margin-top: 20px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #3498db, #8e44ad);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    color: white;
+    margin: 0 auto;
+    transition: background 0.3s ease;
+}
+
+.risk-circle:hover {
+    background: linear-gradient(135deg, #e74c3c, #f39c12);
+    transform: scale(1.1);
+}
+
+.risk-circle:active {
+    transform: scale(1);
+}
+
+/* Button Styling */
+button {
+    background-color: #3498db;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 10px;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+    background-color: #2980b9;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Existing styles remain unchanged unless specified */
+
+/* Hover Effects for Dropdown */
+select:hover {
+    background-color: #555;
+    box-shadow: 0 0 8px #3498db;
+    transform: scale(1.05);
+}
+
+/* Hover Effects for Risk Circle */
+.risk-circle:hover {
+    background: linear-gradient(135deg, #e74c3c, #f39c12);
+    transform: scale(1.15);
+    box-shadow: 0 0 15px #f39c12;
+}
+
+/* Animated Loading Spinner */
+.loading-spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite; /* Updated animation speed */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 1024px) {
+    .dashboard {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+    .panel, .center-panel {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+    header p {
+        font-size: 1em;
+    }
+    .satellite-image {
+        height: auto;
+        max-width: 80%;
+    }
+    .risk-circle {
+        width: 100px;
+        height: 100px;
+        font-size: 18px;
+    }
+    .panel, .center-panel {
+        padding: 20px;
+    }
+}
+
+
+  

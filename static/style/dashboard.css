@@ -1,0 +1,45 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #1b1b3a;
+    color: #fff;
+    background: url("../images/background.jpg") no-repeat center center fixed;
+    background-size: cover;
+    background-position: center;
+    overflow: auto;
+    transition: background-color 0.5s ease;
+}
+
+/* Trajectory Placeholder Styling */
+#satellite1-placeholder, #satellite2-placeholder {
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+
+}
+
+/* Risk Circle Styling */
+.risk-circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #3498db, #8e44ad);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.risk-circle:hover {
+    transform: scale(1.1);
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.8);
+}
+
+.risk-value {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+}

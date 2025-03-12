@@ -1,0 +1,191 @@
+/* General Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #1b1b3a;
+    color: #fff;
+    background: url("../images/background.jpg") no-repeat center center fixed;
+    background-size: cover;
+    background-position: center;
+    overflow: auto;
+    transition: background-color 0.5s ease;
+}
+
+/* Container Styling */
+.container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header Styling */
+h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.5em;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+}
+
+/* Form and Dropdown Styling */
+.form-label {
+    font-size: 1.2em;
+    color: #b0b0b0;
+    margin-bottom: 10px;
+}
+
+.form-select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.form-select:hover {
+    background-color: #444;
+}
+
+.form-select:focus {
+    outline: none;
+    background-color: #555;
+}
+
+/* Trajectory Placeholder Styling */
+#satellite1-placeholder, #satellite2-placeholder {
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    backdrop-filter: blur(15px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#satellite1-placeholder:hover, #satellite2-placeholder:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.8);
+}
+
+/* Button Styling */
+.btn {
+    background-color: #3498db;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 10px;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.btn:hover {
+    background-color: #2980b9;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+/* Risk Circle Styling */
+.risk-circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #3498db, #8e44ad);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.risk-circle:hover {
+    transform: scale(1.1);
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.8);
+}
+
+.risk-value {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.col-md-6 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto; /* Remove fixed width */
+    height: auto; /* Adjust height dynamically */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    .form-select {
+        font-size: 14px;
+    }
+
+    #satellite1-placeholder, #satellite2-placeholder {
+        height: 200px;
+        padding: 15px;
+    }
+
+    .risk-circle {
+        width: 120px;
+        height: 120px;
+    }
+
+    .risk-value {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8em;
+    }
+
+    .form-label {
+        font-size: 1em;
+    }
+
+    .btn {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+
+    #satellite1-placeholder, #satellite2-placeholder {
+        height: 150px;
+        padding: 10px;
+    }
+
+    .risk-circle {
+        width: 100px;
+        height: 100px;
+    }
+
+    .risk-value {
+        font-size: 18px;
+    }
+}
